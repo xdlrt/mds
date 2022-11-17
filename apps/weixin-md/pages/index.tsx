@@ -8,7 +8,7 @@ export default function Web() {
   const output = renderer.assemble();
   marked.use({ renderer: output });
   const [preview, setPreview] = useState("");
-  const handleChange = (event: ChangeEvent<HTMLAreaElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setPreview(marked.parse(event.target.value));
   };
   return (

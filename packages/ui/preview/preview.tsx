@@ -1,3 +1,3 @@
-export const Preview = ({ preview }) => {
+export const Preview = ({ preview }: { preview: string }) => {
   return <div dangerouslySetInnerHTML={{ __html: preview }}></div>;
 };

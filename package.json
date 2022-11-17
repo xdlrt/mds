@@ -16,12 +16,10 @@
   },
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
-      "pnpm run format",
-      "turbo run test"
+      "pnpm run format"
     ],
     "packages/**/*.{js,ts,jsx,tsx}": [
-      "pnpm run format",
-      "turbo run test"
+      "pnpm run format"
     ],
     "*.json": [
       "pnpm run format"
