@@ -20,6 +20,8 @@ importers:
       '@types/react-dom': ^18.0.7
       eslint: 7.32.0
       eslint-config-custom: workspace:*
+      marked: ^4.2.2
+      md-converter: 'workspace: *'
       next: 13.0.0
       react: 18.2.0
       react-dom: 18.2.0
@@ -27,6 +29,8 @@ importers:
       typescript: ^4.5.3
       ui: workspace:*
     dependencies:
+      marked: registry.npmmirror.com/marked/4.2.2
+      md-converter: link:../../packages/md-converter
       next: registry.npmmirror.com/next/13.0.0_642a7ebfe449b93038ce4fa6f56cc3e8
       react: registry.npmmirror.com/react/18.2.0
       react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
@@ -90,9 +94,12 @@ importers:
       '@types/react-dom': ^18.0.6
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
+      md-converter: 'workspace: *'
       react: ^18.2.0
       tsconfig: workspace:*
       typescript: ^4.5.2
+    dependencies:
+      md-converter: link:../md-converter
     devDependencies:
       '@types/react': registry.npmmirror.com/@types/react/18.0.25
       '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.0.9
