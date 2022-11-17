@@ -1,11 +1,13 @@
+import { Theme } from "./types";
+
 let baseColor = `#3f3f3f`;
 
-export const defaultTheme = {
-  BASE: {
+export const defaultTheme: Theme = {
+  common: {
     "text-align": `left`,
     "line-height": `1.75`,
   },
-  block: {
+  heading: {
     // 一级标题样式
     h1: {
       "font-size": `1.2em`,
@@ -45,48 +47,13 @@ export const defaultTheme = {
       margin: `1em 8px 0.5em`,
       color: `rgba(66, 185, 131, 0.9)`,
     },
-    // 段落样式
-    p: {
-      margin: `1em 8px`,
-      "letter-spacing": `0.1em`,
-      color: baseColor,
-    },
-    // 引用样式
-    blockquote: {
-      "font-style": `normal`,
-      "border-left": `none`,
-      padding: `1em 1em`,
-      "border-radius": `8px`,
-      color: `rgba(0,0,0,0.5)`,
-      background: `#f7f7f7`,
-      margin: `0`,
-    },
-    blockquote_p: {
-      "letter-spacing": `0.1em`,
-      color: `rgb(80, 80, 80)`,
-      "font-size": `1em`,
-      display: `block`,
-      margin: 0,
-    },
-    code_pre: {
-      "font-size": `14px`,
-      "overflow-x": `auto`,
-      "border-radius": `8px`,
-      padding: `1em`,
-      "line-height": `1.5`,
-      margin: `10px 8px`,
-    },
-    code: {
-      margin: 0,
-      "white-space": `nowrap`,
-      "font-family": `Menlo, Operator Mono, Consolas, Monaco, monospace`,
-    },
-    image: {
-      "border-radius": `4px`,
-      display: `block`,
-      margin: `0.1em auto 0.5em`,
-      width: `100% !important`,
-    },
+  },
+  paragraph: {
+    margin: `1em 8px`,
+    "letter-spacing": `0.1em`,
+    color: baseColor,
+  },
+  list: {
     ol: {
       "margin-left": `0`,
       "padding-left": `1em`,
@@ -98,77 +65,38 @@ export const defaultTheme = {
       "list-style": `disc`,
       color: baseColor,
     },
-    footnotes: {
-      margin: `0.5em 8px`,
-      "font-size": `80%`,
-      color: baseColor,
-    },
-    figure: {
-      margin: `1.5em 8px`,
-      color: baseColor,
-    },
-    hr: {
-      "border-style": `solid`,
-      "border-width": `1px 0 0`,
-      "border-color": `rgba(0,0,0,0.1)`,
-      "-webkit-transform-origin": `0 0`,
-      "-webkit-transform": `scale(1, 0.5)`,
-      "transform-origin": `0 0`,
-      transform: `scale(1, 0.5)`,
-    },
   },
-  inline: {
-    listitem: {
-      // 'text-indent': `-1em`,
-      // display: `block`,
-      margin: `0.2em 8px`,
-      color: baseColor,
-    },
-
-    codespan: {
-      "font-size": `90%`,
-      "white-space": `pre`,
-      color: `#d14`,
-      background: `rgba(27,31,35,.05)`,
-      padding: `3px 5px`,
-      "border-radius": `4px`,
-    },
-    link: {
-      color: `#576b95`,
-    },
-    wx_link: {
-      color: `#576b95`,
-      "text-decoration": `none`,
-    },
-    // 字体加粗样式
-    strong: {
-      color: `rgba(15, 76, 129, 0.9)`,
-      "font-weight": `bold`,
-    },
-    table: {
-      "border-collapse": `collapse`,
-      "text-align": `center`,
-      margin: `1em 8px`,
-      color: baseColor,
-    },
-    thead: {
-      background: `rgba(0, 0, 0, 0.05)`,
-      "font-weight": `bold`,
-      color: baseColor,
-    },
-    td: {
-      border: `1px solid #dfdfdf`,
-      padding: `0.25em 0.5em`,
-      color: baseColor,
-    },
-    footnote: {
-      "font-size": `12px`,
-      color: baseColor,
-    },
-    figcaption: {
-      "text-align": `center`,
-      color: `#888`,
-      "font-size": `0.8em`,
-    },
+  listItem: {
+    margin: `0.2em 8px`,
+    color: baseColor,
+  },
+  quote: {
+    "font-style": `normal`,
+    "border-left": `none`,
+    padding: `1em 1em`,
+    "border-radius": `8px`,
+    color: `rgba(0,0,0,0.5)`,
+    background: `#f7f7f7`,
+    margin: `0`,
+  },
+  hr: {
+    "border-style": `solid`,
+    "border-width": `1px 0 0`,
+    "border-color": `rgba(0,0,0,0.1)`,
+    "-webkit-transform-origin": `0 0`,
+    "-webkit-transform": `scale(1, 0.5)`,
+    "transform-origin": `0 0`,
+    transform: `scale(1, 0.5)`,
+  },
+  link: {
+    color: `#576b95`,
+  },
+  // 字体加粗样式
+  strong: {
+    color: `rgba(15, 76, 129, 0.9)`,
+    "font-weight": `bold`,
+  },
+  em: {
+    "font-style": "italic",
   },
 };

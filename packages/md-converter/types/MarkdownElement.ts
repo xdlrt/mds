@@ -1,12 +1,12 @@
 export enum MarkdownElement {
-  Heading = "Heading",
-  Paragraph = "Paragraph",
-  Quote = "Quote",
-  List = "List",
-  ListItem = "ListItem",
-  Link = "Link",
-  Strong = "Strong",
-  EM = "EM", // 斜体
-  HR = "HR", // 水平分割线
-  FootNotes = "FootNotes", // 脚注
+  Heading = "heading",
+  Paragraph = "paragraph",
+  Quote = "quote",
+  List = "list",
+  ListItem = "listItem",
+  Link = "link",
+  Strong = "strong",
+  EM = "em", // 斜体
+  HR = "hr", // 水平分割线
+  FootNotes = "footNotes", // 脚注
 }

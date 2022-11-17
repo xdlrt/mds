@@ -1,6 +1,9 @@
+import { Theme } from "../../../themes";
 import { MarkdownElement, ConverterFunc } from "../../../types";
+import { makeStyleText } from "../../../utils";
 
 export const linkConverter: ConverterFunc<MarkdownElement.Link> = (
+  styles: Theme["link"],
   href: string,
   title: string,
   text: string
@@ -11,5 +14,10 @@ export const linkConverter: ConverterFunc<MarkdownElement.Link> = (
   if (href === text) {
     return text;
   }
-  return `<span>${text}</span>`;
+  return `<span styles="${makeStyleText(styles)}">${text}</span>`;
+};
+
+export const linkConverterFactory = (styles: Theme["link"]) => {
+  return (href: string, title: string, text: string) =>
+    linkConverter(styles, href, title, text);
 };
