@@ -1,5 +1,4 @@
-import { ConverterFunc } from "../../../ConverterMgr";
-import { MarkdownElement } from "../../../types";
+import { MarkdownElement, ConverterFunc } from "../../../types";
 
 export const quoteConverter: ConverterFunc<MarkdownElement.Quote> = (
   text: string

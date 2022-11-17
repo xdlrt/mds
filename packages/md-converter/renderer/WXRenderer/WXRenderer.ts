@@ -1,5 +1,4 @@
-import { ConverterMgr } from "../../ConverterMgr";
-import { MarkdownElement } from "../../types";
+import { Renderer } from "marked";
 import { BaseRenderer } from "../BaseRenderer";
 import {
   EMConverter,
@@ -13,23 +12,18 @@ import {
   strongConverter,
 } from "./converters";
 
-function createConverterManager() {
-  const converterMgr = new ConverterMgr();
-  converterMgr.register(MarkdownElement.EM, EMConverter);
-  converterMgr.register(MarkdownElement.Heading, headingConverter);
-  converterMgr.register(MarkdownElement.HR, HRConverter);
-  converterMgr.register(MarkdownElement.Link, linkConverter);
-  converterMgr.register(MarkdownElement.List, listConverter);
-  converterMgr.register(MarkdownElement.ListItem, listItemConverter);
-  converterMgr.register(MarkdownElement.Paragraph, paragraphConverter);
-  converterMgr.register(MarkdownElement.Quote, quoteConverter);
-  converterMgr.register(MarkdownElement.Strong, strongConverter);
-  return converterMgr;
-}
-
 export class WXRenderer extends BaseRenderer {
-  constructor() {
-    const converterMgr = createConverterManager();
-    super({ converterMgr });
+  assemble(): Partial<Renderer> {
+    return {
+      em: EMConverter,
+      heading: headingConverter,
+      hr: HRConverter,
+      link: linkConverter,
+      list: listConverter,
+      listitem: listItemConverter,
+      paragraph: paragraphConverter,
+      blockquote: quoteConverter,
+      strong: strongConverter,
+    };
   }
 }

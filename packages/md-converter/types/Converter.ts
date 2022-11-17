@@ -1,6 +1,5 @@
 // https://marked.js.org/using_pro#renderer
-
-import { MarkdownElement } from "../types";
+import { MarkdownElement } from ".";
 
 export interface ConverterMap {
   [MarkdownElement.Heading]: (text: string, level: number) => string;
