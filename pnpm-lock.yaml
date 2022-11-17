@@ -12,36 +12,7 @@ importers:
       prettier: registry.npmmirror.com/prettier/2.7.1
       turbo: registry.npmmirror.com/turbo/1.6.3
 
-  apps/docs:
-    specifiers:
-      '@babel/core': ^7.0.0
-      '@types/node': ^17.0.12
-      '@types/react': ^18.0.22
-      '@types/react-dom': ^18.0.7
-      eslint: 7.32.0
-      eslint-config-custom: workspace:*
-      next: 13.0.0
-      react: 18.2.0
-      react-dom: 18.2.0
-      tsconfig: workspace:*
-      typescript: ^4.5.3
-      ui: workspace:*
-    dependencies:
-      next: registry.npmmirror.com/next/13.0.0_642a7ebfe449b93038ce4fa6f56cc3e8
-      react: registry.npmmirror.com/react/18.2.0
-      react-dom: registry.npmmirror.com/react-dom/18.2.0_react@18.2.0
-      ui: link:../../packages/ui
-    devDependencies:
-      '@babel/core': registry.npmmirror.com/@babel/core/7.20.2
-      '@types/node': registry.npmmirror.com/@types/node/17.0.45
-      '@types/react': registry.npmmirror.com/@types/react/18.0.25
-      '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.0.9
-      eslint: registry.npmmirror.com/eslint/7.32.0
-      eslint-config-custom: link:../../packages/eslint-config-custom
-      tsconfig: link:../../packages/tsconfig
-      typescript: registry.npmmirror.com/typescript/4.9.3
-
-  apps/web:
+  apps/weixin-md:
     specifiers:
       '@babel/core': ^7.0.0
       '@types/node': ^17.0.12
@@ -85,6 +56,18 @@ importers:
       eslint-config-turbo: registry.npmmirror.com/eslint-config-turbo/0.0.4_eslint@7.32.0
       eslint-plugin-react: registry.npmmirror.com/eslint-plugin-react/7.31.8_eslint@7.32.0
     devDependencies:
+      typescript: registry.npmmirror.com/typescript/4.9.3
+
+  packages/md-converter:
+    specifiers:
+      eslint: ^7.32.0
+      eslint-config-custom: workspace:*
+      tsconfig: workspace:*
+      typescript: ^4.5.2
+    devDependencies:
+      eslint: registry.npmmirror.com/eslint/7.32.0
+      eslint-config-custom: link:../eslint-config-custom
+      tsconfig: link:../tsconfig
       typescript: registry.npmmirror.com/typescript/4.9.3
 
   packages/tsconfig:
