@@ -3,12 +3,12 @@ import { MarkdownElement, ConverterFunc } from "../../../types";
 import { makeStyleText } from "../../../utils";
 
 export const EMConverter: ConverterFunc<MarkdownElement.EM> = (
-  styles: Theme["em"],
+  styles: Theme,
   text: string
 ) => {
-  return `<span style="${makeStyleText(styles)}">${text}</span>`;
+  return `<span style="${makeStyleText(styles.em)}">${text}</span>`;
 };
 
-export const EMConverterFactory = (styles: Theme["em"]) => {
+export const EMConverterFactory = (styles: Theme) => {
   return (text: string) => EMConverter(styles, text);
 };
