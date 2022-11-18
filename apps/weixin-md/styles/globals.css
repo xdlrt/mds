@@ -20,8 +20,16 @@
   padding: 20px;
 }
 
+.md-editor .cm-scroller::-webkit-scrollbar {
+  display: none;
+}
+
 .md-editor .cm-line {
   word-wrap: break-word;
   white-space: pre-wrap;
   word-break: normal;
+}
+
+.preview-wrap::-webkit-scrollbar {
+  display: none;
 }
