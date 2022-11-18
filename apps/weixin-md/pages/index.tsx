@@ -13,7 +13,7 @@ export default function Web() {
   };
   return (
     <div>
-      <h1>My great docs</h1>
+      <h1 className="text-3xl font-bold underline">My great docs</h1>
       <MarkdownEditor onChange={handleChange}></MarkdownEditor>
       <Preview preview={preview}></Preview>
     </div>

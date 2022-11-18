@@ -26,10 +26,13 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
     "eslint-config-custom": "workspace:*",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
+    "postcss": "^8.4.19",
     "prettier": "latest",
+    "tailwindcss": "^3.2.4",
     "turbo": "latest"
   },
   "engines": {
