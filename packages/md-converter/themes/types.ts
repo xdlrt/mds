@@ -5,7 +5,6 @@ export type styleObject = {
 };
 
 export interface Theme {
-  common: styleObject;
   [MarkdownElement.Heading]: {
     h1: styleObject;
     h2: styleObject;
@@ -13,6 +12,7 @@ export interface Theme {
     h4: styleObject;
   };
   [MarkdownElement.Paragraph]: styleObject;
+  [MarkdownElement.BlockquoteParagraph]: styleObject;
   [MarkdownElement.Quote]: styleObject;
   [MarkdownElement.List]: {
     ol: styleObject;

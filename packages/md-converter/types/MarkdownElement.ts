@@ -1,6 +1,7 @@
 export enum MarkdownElement {
   Heading = "heading",
   Paragraph = "paragraph",
+  BlockquoteParagraph = "blockquoteParagraph",
   Quote = "quote",
   List = "list",
   ListItem = "listItem",

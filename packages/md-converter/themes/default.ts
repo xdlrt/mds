@@ -1,12 +1,6 @@
 import { Theme } from "./types";
 
 export const defaultTheme: Theme = {
-  common: {
-    "text-align": `left`,
-    "line-height": `1.75`,
-    "font-family": `-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif`,
-    "font-size": `15px`,
-  },
   heading: {
     // 一级标题样式
     h1: {
@@ -32,7 +26,7 @@ export const defaultTheme: Theme = {
     h3: {
       "font-weight": `bold`,
       "font-size": `1.1em`,
-      margin: `1.5em 8px 0.75em 0`,
+      margin: `1.5em 8px 0.75em`,
       "line-height": `1.2`,
       "padding-left": `8px`,
       "border-left": `3px solid rgba(250, 81, 81, 1)`,
@@ -42,6 +36,7 @@ export const defaultTheme: Theme = {
     h4: {
       "font-weight": `bold`,
       "font-size": `1em`,
+      "text-align": `left`,
       margin: `1em 8px 0.5em`,
       color: `rgba(250, 81, 81, 1)`,
     },
@@ -50,11 +45,21 @@ export const defaultTheme: Theme = {
     margin: `1em 8px`,
     "letter-spacing": `0.1em`,
     color: `#3f3f3f`,
+    "font-size": `15px`,
+    "line-height": `1.75`,
+  },
+  blockquoteParagraph: {
+    "letter-spacing": `0.1em`,
+    color: `rgb(80, 80, 80)`,
+    display: `block`,
+    "font-size": `15px`,
+    "line-height": `1.75`,
   },
   list: {
     ol: {
       "margin-left": `0`,
       "padding-left": `1em`,
+      "list-style": "decimal",
       color: `#3f3f3f`,
     },
     ul: {
@@ -67,11 +72,13 @@ export const defaultTheme: Theme = {
   listItem: {
     margin: `0.2em 8px`,
     color: `#3f3f3f`,
+    "font-size": `15px`,
+    "line-height": `1.75`,
   },
   quote: {
     "font-style": `normal`,
     "border-left": `none`,
-    padding: `1em 1em`,
+    padding: `0.5em 0.75em`,
     "border-radius": `8px`,
     color: `rgba(0,0,0,0.5)`,
     background: `#f7f7f7`,
@@ -88,13 +95,19 @@ export const defaultTheme: Theme = {
   },
   link: {
     color: `#576b95`,
+    "font-size": `15px`,
+    "line-height": `1.75`,
   },
   // 字体加粗样式
   strong: {
     color: `rgba(250, 81, 81, 1)`,
     "font-weight": `bold`,
+    "font-size": `15px`,
+    "line-height": `1.75`,
   },
   em: {
     "font-style": "italic",
+    "font-size": `15px`,
+    "line-height": `1.75`,
   },
 };
