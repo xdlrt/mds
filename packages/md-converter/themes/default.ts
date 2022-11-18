@@ -110,4 +110,9 @@ export const defaultTheme: Theme = {
     "font-size": `15px`,
     "line-height": `1.75`,
   },
+  footNotes: {
+    margin: `0.5em 8px`,
+    "font-size": `80%`,
+    color: `#3f3f3f`,
+  },
 };
