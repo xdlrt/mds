@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { useState } from "react";
 import { MarkdownEditor, Preview } from "ui";
 import { defaultTheme, WXRenderer } from "md-converter";
 import { marked } from "marked";
@@ -8,8 +8,8 @@ export const Editor = () => {
   const output = renderer.assemble();
   marked.use({ renderer: output });
   const [preview, setPreview] = useState("");
-  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    setPreview(marked.parse(event.target.value));
+  const handleChange = (value: string) => {
+    setPreview(marked.parse(value));
   };
   return (
     <div className="mx-auto flex w-full h-full py-4 px-8">
