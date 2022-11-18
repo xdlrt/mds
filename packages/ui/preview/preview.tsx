@@ -6,7 +6,7 @@ export const Preview = ({ preview }: { preview: string }) => {
       </div>
     );
   return (
-    <div className="flex items-center justify-center h-full overflow-y-auto break-all">
+    <div className="preview-wrap flex items-center justify-center h-full overflow-y-auto break-all">
       <div className="h-full">
         <div
           id="preview"

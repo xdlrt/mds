@@ -15,10 +15,10 @@ export const Editor = () => {
   };
   return (
     <div className="mx-auto flex max-w-screen-xl w-full h-full">
-      <div className="border border-zinc-200 w-2/3">
+      <div className="border border-zinc-200 w-3/5">
         <MarkdownEditor onChange={handleChange}></MarkdownEditor>
       </div>
-      <div className="border border-zinc-200 w-1/3">
+      <div className="border border-zinc-200 border-l-0 w-2/5">
         <Preview preview={preview}></Preview>
       </div>
     </div>
