@@ -43,10 +43,12 @@ export const MarkdownEditor = ({
       extensions={[
         markdown({ base: markdownLanguage, codeLanguages: languages }),
       ]}
+      width="100%"
       basicSetup={{
         lineNumbers: false,
         foldGutter: false,
         highlightSelectionMatches: false,
+        drawSelection: false,
       }}
     />
   );

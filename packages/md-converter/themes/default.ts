@@ -4,6 +4,8 @@ export const defaultTheme: Theme = {
   common: {
     "text-align": `left`,
     "line-height": `1.75`,
+    "font-family": `-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif`,
+    "font-size": `15px`,
   },
   heading: {
     // 一级标题样式
