@@ -1,21 +1,10 @@
-import React, { ChangeEvent, useState } from "react";
-import { MarkdownEditor, Preview } from "ui";
-import { defaultTheme, WXRenderer } from "md-converter";
-import { marked } from "marked";
+import React from "react";
+import { Editor } from "../components/Editor";
 
 export default function Web() {
-  const renderer = new WXRenderer({ theme: defaultTheme });
-  const output = renderer.assemble();
-  marked.use({ renderer: output });
-  const [preview, setPreview] = useState("");
-  const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-    setPreview(marked.parse(event.target.value));
-  };
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">My great docs</h1>
-      <MarkdownEditor onChange={handleChange}></MarkdownEditor>
-      <Preview preview={preview}></Preview>
+    <div className="w-full h-screen">
+      <Editor />
     </div>
   );
 }
