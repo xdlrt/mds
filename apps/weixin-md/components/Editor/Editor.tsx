@@ -12,11 +12,11 @@ export const Editor = () => {
     setPreview(marked.parse(value));
   };
   return (
-    <div className="mx-auto flex w-full h-full py-4 px-8">
-      <div className="border border-zinc-200 w-1/2 h-full">
+    <div className="mx-auto flex max-w-screen-xl w-full h-full">
+      <div className="border border-zinc-200 w-1/2">
         <MarkdownEditor onChange={handleChange}></MarkdownEditor>
       </div>
-      <div className="border border-zinc-200 w-1/2 h-full">
+      <div className="border border-zinc-200 w-1/2">
         <Preview preview={preview}></Preview>
       </div>
     </div>
