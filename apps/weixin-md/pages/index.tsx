@@ -2,6 +2,7 @@ import React from "react";
 import { Editor } from "../components/Editor";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { ToastRoot } from "../components/Toast";
 
 export default function Web() {
   return (
@@ -11,6 +12,7 @@ export default function Web() {
         <Editor />
       </div>
       <Footer />
+      <ToastRoot />
     </div>
   );
 }
