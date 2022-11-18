@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.md-editor {
+  height: 100% !important;
+}
+
+.md-editor .cm-editor {
+  height: 100% !important;
+}
+
+.md-editor .cm-editor.cm-focused {
+  outline: none;
+}
+
+.md-editor .cm-scroller {
+  display: block!important;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.md-editor .cm-line {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}

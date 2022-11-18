@@ -9,7 +9,7 @@ export const paragraphConverter: ConverterFunc<MarkdownElement.Paragraph> = (
   if (text.indexOf("<figure") != -1 && text.indexOf("<img") != -1) {
     return text;
   }
-  return text.trim() ? "" : `<p style="${makeStyleText(styles)}">${text}</p>`;
+  return text.trim() ? `<p style="${makeStyleText(styles)}">${text}</p>` : "";
 };
 
 export const paragraphConverterFactory = (styles: Theme["paragraph"]) => {

@@ -1,11 +1,11 @@
 import { Theme } from "./types";
 
-let baseColor = `#3f3f3f`;
-
 export const defaultTheme: Theme = {
   common: {
     "text-align": `left`,
     "line-height": `1.75`,
+    "font-family": `-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif`,
+    "font-size": `15px`,
   },
   heading: {
     // 一级标题样式
@@ -16,8 +16,8 @@ export const defaultTheme: Theme = {
       display: `table`,
       margin: `2em auto 1em`,
       padding: `0 1em`,
-      "border-bottom": `2px solid rgba(0, 152, 116, 0.9)`,
-      color: baseColor,
+      "border-bottom": `2px solid rgba(250, 81, 81, 1)`,
+      color: `rgba(250, 81, 81, 1)`,
     },
     // 二级标题样式
     h2: {
@@ -26,7 +26,7 @@ export const defaultTheme: Theme = {
       "font-weight": `bold`,
       margin: `2em auto 1em`,
       padding: `0 0.2em`,
-      color: baseColor,
+      color: `rgba(250, 81, 81, 1)`,
     },
     // 三级标题样式
     h3: {
@@ -35,38 +35,38 @@ export const defaultTheme: Theme = {
       margin: `1.5em 8px 0.75em 0`,
       "line-height": `1.2`,
       "padding-left": `8px`,
-      "border-left": `3px solid rgba(0, 152, 116, 0.9)`,
-      color: baseColor,
+      "border-left": `3px solid rgba(250, 81, 81, 1)`,
+      color: `rgba(250, 81, 81, 1)`,
     },
     // 四级标题样式
     h4: {
       "font-weight": `bold`,
       "font-size": `1em`,
       margin: `1em 8px 0.5em`,
-      color: `rgba(66, 185, 131, 0.9)`,
+      color: `rgba(250, 81, 81, 1)`,
     },
   },
   paragraph: {
     margin: `1em 8px`,
     "letter-spacing": `0.1em`,
-    color: baseColor,
+    color: `#3f3f3f`,
   },
   list: {
     ol: {
       "margin-left": `0`,
       "padding-left": `1em`,
-      color: baseColor,
+      color: `#3f3f3f`,
     },
     ul: {
       "margin-left": `0`,
       "padding-left": `1em`,
       "list-style": `disc`,
-      color: baseColor,
+      color: `#3f3f3f`,
     },
   },
   listItem: {
     margin: `0.2em 8px`,
-    color: baseColor,
+    color: `#3f3f3f`,
   },
   quote: {
     "font-style": `normal`,
@@ -91,7 +91,7 @@ export const defaultTheme: Theme = {
   },
   // 字体加粗样式
   strong: {
-    color: `rgba(15, 76, 129, 0.9)`,
+    color: `rgba(250, 81, 81, 1)`,
     "font-weight": `bold`,
   },
   em: {
