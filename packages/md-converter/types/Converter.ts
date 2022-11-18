@@ -2,6 +2,11 @@
 import { MarkdownElement } from ".";
 import { Theme } from "../themes";
 
+export interface LinkConverterOptions {
+  addFootNote?: (title: string, href: string) => number;
+  enableFootNote?: boolean;
+}
+
 export interface ConverterMap {
   [MarkdownElement.Heading]: (
     styles: Theme,
@@ -24,6 +29,7 @@ export interface ConverterMap {
   ) => string;
   [MarkdownElement.Link]: (
     styles: Theme,
+    options: LinkConverterOptions,
     href: string,
     title: string,
     text: string

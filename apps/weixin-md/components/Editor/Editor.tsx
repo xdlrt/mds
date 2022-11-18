@@ -9,14 +9,16 @@ export const Editor = () => {
   marked.use({ renderer: output });
   const [preview, setPreview] = useState("");
   const handleChange = (value: string) => {
-    setPreview(marked.parse(value));
+    const content = marked.parse(value);
+    const suffix = renderer.buildSuffix();
+    setPreview(content + suffix);
   };
   return (
     <div className="mx-auto flex max-w-screen-xl w-full h-full">
-      <div className="border border-zinc-200 w-1/2">
+      <div className="border border-zinc-200 w-2/3">
         <MarkdownEditor onChange={handleChange}></MarkdownEditor>
       </div>
-      <div className="border border-zinc-200 w-1/2">
+      <div className="border border-zinc-200 w-1/3">
         <Preview preview={preview}></Preview>
       </div>
     </div>
