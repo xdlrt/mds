@@ -24,4 +24,9 @@ export interface Theme {
   [MarkdownElement.HR]: styleObject;
   [MarkdownElement.EM]: styleObject;
   [MarkdownElement.FootNotes]: styleObject;
+  [MarkdownElement.Code]: {
+    pre: styleObject;
+    code: styleObject;
+  };
+  [MarkdownElement.CodeSpan]: styleObject;
 }
