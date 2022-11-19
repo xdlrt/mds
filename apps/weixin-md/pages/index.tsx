@@ -14,9 +14,10 @@ export default function Web() {
           name="description"
           content="一款高度简洁的微信 Markdown 编辑器 - 一颗小树"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.png" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
+
       <Header />
       <div style={{ height: "calc(100% - 110px - 52px)" }}>
         <Editor />
