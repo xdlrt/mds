@@ -14,7 +14,7 @@ export default function Web() {
           name="description"
           content="一款高度简洁的微信 Markdown 编辑器 - 一颗小树"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <Header />
