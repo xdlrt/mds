@@ -37,6 +37,8 @@ export interface ConverterMap {
   [MarkdownElement.HR]: (styles: Theme) => string;
   [MarkdownElement.Strong]: (styles: Theme, text: string) => string;
   [MarkdownElement.EM]: (styles: Theme, text: string) => string;
+  [MarkdownElement.Code]: (styles: Theme, text: string, lang: string) => string;
+  [MarkdownElement.CodeSpan]: (styles: Theme, text: string) => string;
 }
 
 export type ConverterType = keyof ConverterMap;

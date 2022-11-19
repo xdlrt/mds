@@ -115,4 +115,27 @@ export const defaultTheme: Theme = {
     "font-size": `80%`,
     color: `#3f3f3f`,
   },
+  code: {
+    pre: {
+      "font-size": `14px`,
+      "overflow-x": `auto`,
+      "border-radius": `8px`,
+      padding: `1em`,
+      "line-height": `1.5`,
+      margin: `10px 8px`,
+    },
+    code: {
+      margin: `0px`,
+      "white-space": `nowrap`,
+      "font-family": `Menlo, Operator Mono, Consolas, Monaco, monospace`,
+    },
+  },
+  codeSpan: {
+    "font-size": `90%`,
+    "white-space": `pre`,
+    color: `#d14`,
+    background: `rgba(27,31,35,.05)`,
+    padding: `3px 5px`,
+    "border-radius": `4px`,
+  },
 };

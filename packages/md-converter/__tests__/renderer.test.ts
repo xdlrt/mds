@@ -27,7 +27,7 @@ describe("WXRenderer check with default theme", () => {
   marked.use({ renderer: output });
 
   test("valid converter number", () => {
-    expect(Object.keys(output).length).toEqual(9);
+    expect(Object.keys(output).length).toEqual(10);
   });
 
   test("em", () => {

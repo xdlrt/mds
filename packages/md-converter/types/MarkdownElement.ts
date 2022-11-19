@@ -10,4 +10,6 @@ export enum MarkdownElement {
   EM = "em", // 斜体
   HR = "hr", // 水平分割线
   FootNotes = "footNotes", // 脚注
+  Code = "code",
+  CodeSpan = "codeSpan",
 }
