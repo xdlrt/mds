@@ -2,11 +2,12 @@ import CodeMirror from "@uiw/react-codemirror";
 import { markdown, markdownLanguage } from "@codemirror/lang-markdown";
 import { languages } from "@codemirror/language-data";
 
-export const MarkdownEditor = ({
-  onChange,
-}: {
-  onChange: (value: string) => void;
-}) => {
+interface MarkdownEditorProps {
+  onChange?: (value: string) => void;
+}
+
+export const MarkdownEditor = (props: MarkdownEditorProps) => {
+  const { onChange } = props;
   const handleChange = (value: string) => {
     onChange && onChange(value);
   };
@@ -14,7 +15,6 @@ export const MarkdownEditor = ({
     <CodeMirror
       className="md-editor"
       width="100%"
-      // value={code}
       onChange={handleChange}
       extensions={[
         markdown({
