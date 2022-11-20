@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/apps/weixin-md"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 20
+- package-ecosystem: npm
+  directory: "/packages/ui"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 20
+- package-ecosystem: npm
+  directory: "/packages/md-coverter"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 20
+- package-ecosystem: npm
+  directory: "/packages/eslint-config-custom"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 20
