@@ -11,7 +11,7 @@
   "dependencies": {
     "marked": "^4.2.2",
     "md-converter": "workspace: *",
-    "next": "13.0.0",
+    "next": "13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-toastify": "^9.1.1",
@@ -19,11 +19,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "@types/node": "^17.0.12",
+    "@types/node": "18.11.9",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "config": "workspace:*",
-    "eslint": "7.32.0",
+    "eslint": "8.28.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.3"
