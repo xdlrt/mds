@@ -25,15 +25,19 @@ export class WXRenderer extends BaseRenderer {
 
   private addFootNote = (title: string, href: string) => {
     const length = this.footNotes.push({ title, href });
-    return length - 1;
+    return length;
   };
 
   private buildFootNotes = () => {
     let notes = this.footNotes.map(({ title, href }, index) => {
       if (title === href) {
-        return `<code style="font-size: 90%; opacity: 0.6;">[${index}]</code>: <i>${title}</i><br/>`;
+        return `<code style="font-size: 90%; opacity: 0.6;">[${
+          index + 1
+        }]</code>: <i>${title}</i><br/>`;
       }
-      return `<code style="font-size: 90%; opacity: 0.6;">[${index}]</code> ${title}: <i>${href}</i><br/>`;
+      return `<code style="font-size: 90%; opacity: 0.6;">[${
+        index + 1
+      }]</code> ${title}: <i>${href}</i><br/>`;
     });
     if (notes.length === 0) {
       return "";

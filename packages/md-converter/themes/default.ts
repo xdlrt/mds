@@ -30,7 +30,7 @@ export const defaultTheme: Theme = {
       "line-height": `1.2`,
       "padding-left": `8px`,
       "border-left": `3px solid rgba(250, 81, 81, 1)`,
-      color: `rgba(250, 81, 81, 1)`,
+      color: `#3f3f3f`,
     },
     // 四级标题样式
     h4: {

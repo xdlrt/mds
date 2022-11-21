@@ -1,17 +1,11 @@
+import { copy } from "../../utils/clipboard";
 import { toast } from "../Toast";
 
 export const Header = () => {
-  const copy = () => {
+  const handleCopy = () => {
     let previewDOM = document.getElementById(`preview`);
     if (!previewDOM) return toast.error("现在没什么可以复制的");
-    previewDOM.focus();
-    window.getSelection()!.removeAllRanges();
-    let range = document.createRange();
-    if (previewDOM.firstChild) range.setStartBefore(previewDOM.firstChild);
-    if (previewDOM.lastChild) range.setEndAfter(previewDOM.lastChild);
-    window.getSelection()!.addRange(range);
-    document.execCommand(`copy`);
-    window.getSelection()!.removeAllRanges();
+    copy(previewDOM.innerHTML);
     toast.success("内容已复制，可到公众号后台粘贴");
   };
 
@@ -31,7 +25,7 @@ export const Header = () => {
             <button
               className="block rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none"
               type="button"
-              onClick={copy}
+              onClick={handleCopy}
             >
               复制到剪贴板
             </button>
