@@ -21,6 +21,7 @@
   "dependencies": {
     "@codemirror/lang-markdown": "^6.0.5",
     "@codemirror/language-data": "^6.1.0",
+    "@lezer/common": "^1.0.2",
     "@uiw/react-codemirror": "^4.15.1",
     "md-converter": "workspace: *"
   }
