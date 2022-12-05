@@ -24,7 +24,7 @@
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "config": "workspace:*",
-    "eslint": "8.28.0",
+    "eslint": "8.29.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.3"
