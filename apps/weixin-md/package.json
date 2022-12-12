@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "marked": "4.2.2",
+    "marked": "4.2.4",
     "md-converter": "workspace: *",
     "next": "13.0.5",
     "react": "18.2.0",
