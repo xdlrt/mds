@@ -1,3 +1,4 @@
+import { describe, test, expect } from "vitest";
 import { marked } from "marked";
 import { BaseRenderer } from "../renderer/BaseRenderer";
 import { WXRenderer } from "../renderer/WXRenderer";
