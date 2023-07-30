@@ -27,12 +27,12 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "eslint-config-custom": "workspace:*",
+    "eslint-config-custom": "workspace:0.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "postcss": "^8.4.23",
+    "lint-staged": "^13.2.3",
+    "postcss": "^8.4.27",
     "prettier": "latest",
-    "tailwindcss": "^3.3.2",
+    "tailwindcss": "^3.3.3",
     "turbo": "latest"
   },
   "engines": {

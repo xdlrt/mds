@@ -4,7 +4,7 @@ import { makeStyleText } from "../../../utils";
 
 export const EMConverter: ConverterFunc<MarkdownElement.EM> = (
   styles: Theme,
-  text: string
+  text: string,
 ) => {
   return `<span style="${makeStyleText(styles.em)}">${text}</span>`;
 };

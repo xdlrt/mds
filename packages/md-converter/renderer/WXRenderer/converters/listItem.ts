@@ -4,7 +4,7 @@ import { makeStyleText } from "../../../utils";
 
 export const listItemConverter: ConverterFunc<MarkdownElement.ListItem> = (
   styles: Theme,
-  text: string
+  text: string,
 ) => {
   return `<li style="${makeStyleText(styles.listItem)}">${text}</li>`;
 };

@@ -4,7 +4,7 @@ import { makeStyleText } from "../../../utils";
 
 export const strongConverter: ConverterFunc<MarkdownElement.Strong> = (
   styles: Theme,
-  text: string
+  text: string,
 ) => {
   return `<strong style="${makeStyleText(styles.strong)}">${text}</strong>`;
 };

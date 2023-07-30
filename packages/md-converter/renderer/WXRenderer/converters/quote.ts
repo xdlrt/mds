@@ -4,14 +4,14 @@ import { makeStyleText } from "../../../utils";
 
 export const quoteConverter: ConverterFunc<MarkdownElement.Quote> = (
   styles: Theme,
-  text: string
+  text: string,
 ) => {
   text = text.replace(
     /<p.*?>/g,
-    `<p style="${makeStyleText(styles.blockquoteParagraph)}">`
+    `<p style="${makeStyleText(styles.blockquoteParagraph)}">`,
   );
   return `<blockquote style="${makeStyleText(
-    styles.quote
+    styles.quote,
   )}">${text}</blockquote>`;
 };
 

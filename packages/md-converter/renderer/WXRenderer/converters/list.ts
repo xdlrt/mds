@@ -6,7 +6,7 @@ export const listConverter: ConverterFunc<MarkdownElement.List> = (
   styles: Theme,
   body: string,
   ordered: boolean,
-  _start: number
+  _start: number,
 ) => {
   body = body.replace(/<\/*p.*?>/g, "");
   let segments = body.split(`<%s/>`);

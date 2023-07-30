@@ -77,26 +77,26 @@ describe("WXRenderer check with default theme", () => {
     marked.use({ renderer: output });
 
     const weixinLink = marked.parse(
-      "[一颗小树 #27 找到并坚持自己的热爱](https://mp.weixin.qq.com/s/-tF20PdAdMuqXakuBt7_wQ)"
+      "[一颗小树 #27 找到并坚持自己的热爱](https://mp.weixin.qq.com/s/-tF20PdAdMuqXakuBt7_wQ)",
     );
     expect(weixinLink).toMatch("<a");
     expect(weixinLink).toMatch("</a>");
     expect(weixinLink).toMatch("title");
     expect(weixinLink).toMatch("一颗小树 #27 找到并坚持自己的热爱");
     expect(weixinLink).toMatch(
-      "https://mp.weixin.qq.com/s/-tF20PdAdMuqXakuBt7_wQ"
+      "https://mp.weixin.qq.com/s/-tF20PdAdMuqXakuBt7_wQ",
     );
     expect(renderer.buildSuffix()).toEqual("");
 
     const weixinLink2 = marked.parse(
-      "[一颗小树 #27 找到并坚持自己的热爱](http://mp.weixin.qq.com/s/-tF20PdAdMuqXakuBt7_wQ)"
+      "[一颗小树 #27 找到并坚持自己的热爱](http://mp.weixin.qq.com/s/-tF20PdAdMuqXakuBt7_wQ)",
     );
     expect(weixinLink2).toMatch(
-      "http://mp.weixin.qq.com/s/-tF20PdAdMuqXakuBt7_wQ"
+      "http://mp.weixin.qq.com/s/-tF20PdAdMuqXakuBt7_wQ",
     );
 
     const link = marked.parse(
-      "[一颗小树 - 竹白](https://xiaoshu.zhubai.love)xxx[一颗小树 - 竹白](https://xiaoshu.zhubai.love)"
+      "[一颗小树 - 竹白](https://xiaoshu.zhubai.love)xxx[一颗小树 - 竹白](https://xiaoshu.zhubai.love)",
     );
     expect(link).toMatch("<span");
     expect(link).toMatch("</span>");
