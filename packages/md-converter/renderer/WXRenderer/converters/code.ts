@@ -6,7 +6,7 @@ import { makeStyleText } from "../../../utils";
 export const CodeConverter: ConverterFunc<MarkdownElement.Code> = (
   styles: Theme,
   text: string,
-  lang: string
+  lang: string,
 ) => {
   lang = hljs.getLanguage(lang) ? lang : "plaintext";
 
@@ -20,9 +20,9 @@ export const CodeConverter: ConverterFunc<MarkdownElement.Code> = (
     });
 
   return `<pre class="hljs code__pre" style="${makeStyleText(
-    styles.code.pre
+    styles.code.pre,
   )}"><code class="prettyprint language-${lang}" style="${makeStyleText(
-    styles.code.code
+    styles.code.code,
   )}">${text}</code></pre>`;
 };
 

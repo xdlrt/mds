@@ -11,11 +11,11 @@ export const linkConverter: ConverterFunc<MarkdownElement.Link> = (
   options: LinkConverterOptions,
   href: string,
   title: string,
-  text: string
+  text: string,
 ) => {
   if (href.includes("mp.weixin.qq.com")) {
     return `<a href="${href}" title="${title || text}" style="${makeStyleText(
-      styles.link
+      styles.link,
     )}">${text}</a>`;
   }
   if (href === text) {
@@ -25,7 +25,7 @@ export const linkConverter: ConverterFunc<MarkdownElement.Link> = (
   if (enableFootNote && addFootNote) {
     let index = addFootNote(title || text, href);
     return `<span style="${makeStyleText(
-      styles.link
+      styles.link,
     )}">${text}<sup>[${index}]</sup></span>`;
   }
   return `<span style="${makeStyleText(styles.link)}">${text}</span>`;
@@ -33,7 +33,7 @@ export const linkConverter: ConverterFunc<MarkdownElement.Link> = (
 
 export const linkConverterFactory = (
   styles: Theme,
-  options: LinkConverterOptions
+  options: LinkConverterOptions,
 ) => {
   return (href: string, title: string, text: string) =>
     linkConverter(styles, options, href, title, text);

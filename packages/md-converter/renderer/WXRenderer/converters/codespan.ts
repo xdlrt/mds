@@ -4,7 +4,7 @@ import { makeStyleText } from "../../../utils";
 
 export const CodeSpanConverter: ConverterFunc<MarkdownElement.CodeSpan> = (
   styles: Theme,
-  text: string
+  text: string,
 ) => {
   return `<code style="${makeStyleText(styles.codeSpan)}">${text}</code>`;
 };

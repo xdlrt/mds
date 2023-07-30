@@ -23,6 +23,7 @@
     "@codemirror/language-data": "^6.1.0",
     "@lezer/common": "^1.0.2",
     "@uiw/react-codemirror": "^4.15.1",
+    "@codemirror/state": "6.2.1",
     "md-converter": "workspace: *"
   }
 }

@@ -4,7 +4,7 @@ import { makeStyleText } from "../../../utils";
 
 export const paragraphConverter: ConverterFunc<MarkdownElement.Paragraph> = (
   styles: Theme,
-  text: string
+  text: string,
 ) => {
   if (text.indexOf("<figure") != -1 && text.indexOf("<img") != -1) {
     return text;

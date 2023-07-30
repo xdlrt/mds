@@ -11,7 +11,7 @@ describe("utils - styles", () => {
         "font-style": "italic",
         "font-size": `15px`,
         "line-height": `1.75`,
-      })
+      }),
     ).toEqual("font-style:italic;font-size:15px;line-height:1.75");
   });
 });

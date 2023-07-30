@@ -5,7 +5,7 @@ import { makeStyleText } from "../../../utils";
 export const headingConverter: ConverterFunc<MarkdownElement.Heading> = (
   styles: Theme,
   text: string,
-  level: number
+  level: number,
 ) => {
   switch (level) {
     case 1:

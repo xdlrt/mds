@@ -11,7 +11,7 @@ export interface ConverterMap {
   [MarkdownElement.Heading]: (
     styles: Theme,
     text: string,
-    level: number
+    level: number,
   ) => string;
   [MarkdownElement.Paragraph]: (styles: Theme, text: string) => string;
   [MarkdownElement.Quote]: (styles: Theme, text: string) => string;
@@ -19,20 +19,20 @@ export interface ConverterMap {
     styles: Theme,
     body: string,
     ordered: boolean,
-    start: number
+    start: number,
   ) => string;
   [MarkdownElement.ListItem]: (
     styles: Theme,
     text: string,
     task: boolean,
-    checked: boolean
+    checked: boolean,
   ) => string;
   [MarkdownElement.Link]: (
     styles: Theme,
     options: LinkConverterOptions,
     href: string,
     title: string,
-    text: string
+    text: string,
   ) => string;
   [MarkdownElement.HR]: (styles: Theme) => string;
   [MarkdownElement.Strong]: (styles: Theme, text: string) => string;
