@@ -1,5 +1,7 @@
 # 公众号排版工具
 
+![ci](https://github.com/xdlrt/mds/actions/workflows/ci.yml/badge.svg)
+
 一款高度简洁的微信公众号 Markdown 编辑器! 🎉
 
 在线体验：https://markdowns.yeshu.cloud
