@@ -1,11 +1,12 @@
 import { copy } from "../../utils/clipboard";
+import { exportHTML } from "../../utils/export";
 import { toast } from "../Toast";
 
 export const Header = () => {
   const handleCopy = () => {
     let previewDOM = document.getElementById(`preview`);
     if (!previewDOM) return toast.error("现在没什么可以复制的");
-    copy(previewDOM.innerHTML);
+    copy(exportHTML(previewDOM));
     toast.success("内容已复制，可到公众号后台粘贴");
   };
 
@@ -42,11 +43,11 @@ export const Header = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                 />
               </svg>

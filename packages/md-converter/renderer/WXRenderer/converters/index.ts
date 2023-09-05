@@ -7,3 +7,5 @@ export * from "./listItem";
 export * from "./paragraph";
 export * from "./quote";
 export * from "./strong";
+export * from "./code";
+export * from "./codespan";

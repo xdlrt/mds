@@ -10,23 +10,23 @@
   },
   "dependencies": {
     "marked": "4.2.3",
-    "md-converter": "workspace: *",
+    "md-converter": "workspace:^",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-toastify": "^9.1.1",
+    "react-toastify": "^9.1.3",
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@types/marked": "^4.0.7",
+    "@babel/core": "^7.22.15",
+    "@types/marked": "^4.3.1",
     "@types/node": "18.11.10",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
     "config": "workspace:*",
     "eslint": "8.28.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
-    "typescript": "^4.5.3"
+    "typescript": "^4.9.5"
   }
 }
