@@ -28,7 +28,7 @@ describe("WXRenderer check with default theme", () => {
   marked.use({ renderer: output });
 
   test("valid converter number", () => {
-    expect(Object.keys(output).length).toEqual(10);
+    expect(Object.keys(output).length).toEqual(11);
   });
 
   test("em", () => {
@@ -153,5 +153,15 @@ describe("WXRenderer check with default theme", () => {
     expect(text).toMatch("<strong");
     expect(text).toMatch("</strong>");
     expect(text).toMatch("xxx");
+  });
+
+  test("code", () => {
+    const text = marked.parse("```typescript\nconst test = 1;```");
+    expect(text).toMatch("<pre");
+    expect(text).toMatch("</pre>");
+    expect(text).toMatch("<code");
+    expect(text).toMatch("</code");
+    expect(text).toMatch("hljs");
+    expect(text).toMatch("test");
   });
 });
