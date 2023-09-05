@@ -1,9 +1,10 @@
 import hljs from "highlight.js";
+import "highlight.js/styles/github.css";
 import { Theme } from "../../../themes";
 import { MarkdownElement, ConverterFunc } from "../../../types";
 import { makeStyleText } from "../../../utils";
 
-export const CodeConverter: ConverterFunc<MarkdownElement.Code> = (
+export const codeConverter: ConverterFunc<MarkdownElement.Code> = (
   styles: Theme,
   text: string,
   lang: string,
@@ -26,6 +27,6 @@ export const CodeConverter: ConverterFunc<MarkdownElement.Code> = (
   )}">${text}</code></pre>`;
 };
 
-export const CodeConverterFactory = (styles: Theme) => {
-  return (text: string, lang: string) => CodeConverter(styles, text, lang);
+export const codeConverterFactory = (styles: Theme) => {
+  return (text: string, lang: string) => codeConverter(styles, text, lang);
 };

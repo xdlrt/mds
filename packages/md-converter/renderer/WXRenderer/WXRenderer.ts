@@ -11,9 +11,9 @@ import {
   paragraphConverterFactory,
   quoteConverterFactory,
   strongConverterFactory,
+  codeConverterFactory,
+  codeSpanConverterFactory,
 } from "./converters";
-// import { CodeConverterFactory } from "./converters/code";
-import { CodeSpanConverterFactory } from "./converters/codespan";
 
 interface FootNote {
   title: string;
@@ -69,8 +69,8 @@ export class WXRenderer extends BaseRenderer {
       paragraph: paragraphConverterFactory(this.theme),
       blockquote: quoteConverterFactory(this.theme),
       strong: strongConverterFactory(this.theme),
-      // code: CodeConverterFactory(this.theme),
-      codespan: CodeSpanConverterFactory(this.theme),
+      code: codeConverterFactory(this.theme),
+      codespan: codeSpanConverterFactory(this.theme),
     };
   }
 }
