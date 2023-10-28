@@ -4,6 +4,7 @@ import { Editor } from "../components/Editor";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { ToastRoot } from "../components/Toast";
+import Script from "next/script";
 
 export default function Web() {
   return (
@@ -24,6 +25,16 @@ export default function Web() {
       </div>
       <Footer />
       <ToastRoot />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-8HS3PBBC70" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-8HS3PBBC70');
+        `}
+      </Script>
     </div>
   );
 }
