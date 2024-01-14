@@ -23,7 +23,10 @@ export interface Theme {
   [MarkdownElement.Strong]: styleObject;
   [MarkdownElement.HR]: styleObject;
   [MarkdownElement.EM]: styleObject;
-  [MarkdownElement.FootNotes]: styleObject;
+  [MarkdownElement.FootNotes]: {
+    container: styleObject;
+    item: styleObject;
+  };
   [MarkdownElement.Code]: {
     pre: styleObject;
     code: styleObject;

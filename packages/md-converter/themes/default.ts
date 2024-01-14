@@ -58,19 +58,19 @@ export const defaultTheme: Theme = {
   list: {
     ol: {
       "margin-left": `0`,
-      "padding-left": `1em`,
+      "padding-left": `2.2em`,
       "list-style": "decimal",
       color: `#3f3f3f`,
     },
     ul: {
       "margin-left": `0`,
-      "padding-left": `1em`,
+      "padding-left": `2em`,
       "list-style": `disc`,
       color: `#3f3f3f`,
     },
   },
   listItem: {
-    margin: `0.2em 8px`,
+    margin: `0.2em 8px 0.2em 0`,
     color: `#3f3f3f`,
     "font-size": `15px`,
     "line-height": `1.75`,
@@ -111,9 +111,15 @@ export const defaultTheme: Theme = {
     "line-height": `1.75`,
   },
   footNotes: {
-    margin: `0.5em 8px`,
-    "font-size": `80%`,
-    color: `#3f3f3f`,
+    container: {
+      margin: `0.5em 8px`,
+      "font-size": `80%`,
+      color: `#3f3f3f`,
+    },
+    item: {
+      "word-break": "break-all",
+      "font-style": "normal",
+    },
   },
   code: {
     pre: {
