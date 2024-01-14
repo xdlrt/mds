@@ -107,7 +107,7 @@ describe("WXRenderer check with default theme", () => {
     expect(renderer.buildSuffix()).toMatch("<p");
     expect(renderer.buildSuffix()).toMatch("\n");
     expect(renderer.buildSuffix()).toMatch("<code");
-    expect(renderer.buildSuffix()).toMatch("<i>");
+    expect(renderer.buildSuffix()).toMatch("<em");
     expect(renderer.buildSuffix()).toMatch("<br/>");
   });
 
