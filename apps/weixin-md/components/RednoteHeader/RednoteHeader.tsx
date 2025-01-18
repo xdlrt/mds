@@ -11,6 +11,7 @@ export const RednoteHeader = () => {
         scale: 3,
       });
 
+      // document.body.appendChild(canvas);
       const link = document.createElement("a");
       link.download = `preview-${i + 1}.png`;
       link.href = canvas.toDataURL();

@@ -12,7 +12,6 @@ export const listItemConverter: ConverterFunc<MarkdownElement.ListItem> = (
   if (task) {
     checkbox = `<input type="checkbox" ${checked ? "checked" : ""} disabled /> `;
   }
-  console.log(this);
   return `<li style="${makeStyleText(
     styles[MarkdownElement.ListItem],
   )}">${checkbox}${text}</li>`;

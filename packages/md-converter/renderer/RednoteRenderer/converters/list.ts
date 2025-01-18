@@ -6,13 +6,32 @@ export const listConverter: ConverterFunc<MarkdownElement.List> = (
   styles: Theme,
   body: string,
   ordered: boolean,
-  start: number,
+  _start: number,
 ) => {
-  const tag = ordered ? "ol" : "ul";
-  const startAttr = ordered && start !== 1 ? `start="${start}"` : "";
-  return `<${tag} ${startAttr} style="${makeStyleText(
-    styles[MarkdownElement.List][tag],
-  )}">${body}</${tag}>`;
+  body = body.replace(/<\/*p.*?>/g, "");
+  // Split on li tags and filter out empty strings
+  let segments = body.split(/<\/?li[^>]*>/g).filter((s) => s.trim());
+  if (!ordered) {
+    // Wrap each segment in li tags
+    body = segments
+      .map(
+        (s) =>
+          `<li style="${makeStyleText(
+            styles[MarkdownElement.ListItem],
+          )}"><span style="font-size: 20px;${makeStyleText(styles[MarkdownElement.ListItemSymbol])}">•</span>${s}</li>`,
+      )
+      .join("");
+    return `<ul style="${makeStyleText(styles[MarkdownElement.List].ul)}">${body}</ul>`;
+  }
+  body = segments
+    .map(
+      (s, i) =>
+        `<li style="${makeStyleText(
+          styles[MarkdownElement.ListItem],
+        )}"><span style="${makeStyleText(styles[MarkdownElement.ListItemSymbol])}">${i + 1}.</span>${s}</li>`,
+    )
+    .join("");
+  return `<ol style="${makeStyleText(styles[MarkdownElement.List].ol)}">${body}</ol>`;
 };
 
 export const listConverterFactory = (styles: Theme) => {

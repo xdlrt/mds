@@ -19,6 +19,7 @@ export interface Theme {
     ul: styleObject;
   };
   [MarkdownElement.ListItem]: styleObject;
+  [MarkdownElement.ListItemSymbol]?: styleObject;
   [MarkdownElement.Link]: styleObject;
   [MarkdownElement.Strong]: styleObject;
   [MarkdownElement.HR]: styleObject;

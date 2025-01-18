@@ -54,15 +54,11 @@ export const rednoteTheme: Theme = {
   },
   list: {
     ol: {
-      "margin-left": `0`,
-      "padding-left": `18px`,
-      "list-style": "decimal",
+      "list-style": "none",
       color: `#3f3f3f`,
     },
     ul: {
-      "margin-left": `0`,
-      "padding-left": `16px`,
-      "list-style": `disc`,
+      "list-style": "none",
       color: `#3f3f3f`,
     },
   },
@@ -72,6 +68,10 @@ export const rednoteTheme: Theme = {
     color: `#3f3f3f`,
     "font-size": `14px`,
     "line-height": `1.5`,
+  },
+  listItemSymbol: {
+    "margin-right": `4px`,
+    "line-height": `1`,
   },
   quote: {
     "font-style": `normal`,
