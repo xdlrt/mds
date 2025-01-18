@@ -9,8 +9,8 @@ export const listConverter: ConverterFunc<MarkdownElement.List> = (
   start: number,
 ) => {
   const tag = ordered ? "ol" : "ul";
-  const startAttr = ordered && start !== 1 ? ` start="${start}"` : "";
-  return `<${tag} class="list"${startAttr} style="${makeStyleText(
+  const startAttr = ordered && start !== 1 ? `start="${start}"` : "";
+  return `<${tag} ${startAttr} style="${makeStyleText(
     styles[MarkdownElement.List][tag],
   )}">${body}</${tag}>`;
 };

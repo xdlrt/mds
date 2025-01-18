@@ -2,7 +2,7 @@ export const RednotePreview = ({ previews }: { previews: string[] }) => {
   if (!previews.length)
     return (
       <div className="flex items-center justify-center h-full text-gray-400">
-        这里空空如也
+        There is nothing here.
       </div>
     );
   return (
@@ -10,7 +10,7 @@ export const RednotePreview = ({ previews }: { previews: string[] }) => {
       {previews.map((preview, i) => (
         <div
           key={i}
-          className="p-4 shadow-2xl flex justify-center flex-col"
+          className="mt-4 p-4 flex justify-center flex-col"
           style={{ width: 300, height: 400 }}
           dangerouslySetInnerHTML={{ __html: preview }}
         ></div>

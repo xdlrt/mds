@@ -14,7 +14,7 @@ export const linkConverter: ConverterFunc<MarkdownElement.Link> = (
   text: string,
 ) => {
   const titleAttr = title ? ` title="${title}"` : "";
-  return `<a class="link" href="${href}"${titleAttr} style="${makeStyleText(
+  return `<a href="${href}"${titleAttr} style="${makeStyleText(
     styles[MarkdownElement.Link],
   )}">${text}</a>`;
 };

@@ -9,7 +9,7 @@ export const headingConverter: ConverterFunc<MarkdownElement.Heading> = (
 ) => {
   const tag =
     `h${Math.min(Math.max(level, 1), 6)}` as keyof (typeof styles)[MarkdownElement.Heading];
-  return `<${tag} class="heading" style="${makeStyleText(
+  return `<${tag} style="${makeStyleText(
     styles[MarkdownElement.Heading][tag],
   )}">${text}</${tag}>`;
 };

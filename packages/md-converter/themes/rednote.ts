@@ -9,6 +9,7 @@ export const rednoteTheme: Theme = {
       "font-weight": `bold`,
       margin: `15px 0 12px`,
       color: `#494E5E`,
+      "font-family": `-apple-system`,
     },
     // 二级标题样式
     h2: {
@@ -20,6 +21,7 @@ export const rednoteTheme: Theme = {
       padding: `0 6px`,
       "border-left": `4px solid #494E5E`,
       color: `#494E5E`,
+      "font-family": `-apple-system`,
     },
     // 三级标题样式
     h3: {

@@ -6,7 +6,7 @@ export const paragraphConverter: ConverterFunc<MarkdownElement.Paragraph> = (
   styles: Theme,
   text: string,
 ) => {
-  return `<p class="paragraph" style="${makeStyleText(
+  return `<p style="${makeStyleText(
     styles[MarkdownElement.Paragraph],
   )}">${text}</p>`;
 };

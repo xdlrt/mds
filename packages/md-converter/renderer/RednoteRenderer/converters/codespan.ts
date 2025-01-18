@@ -6,7 +6,7 @@ export const codespanConverter: ConverterFunc<MarkdownElement.CodeSpan> = (
   styles: Theme,
   text: string,
 ) => {
-  return `<code class="codespan" style="${makeStyleText(
+  return `<code style="${makeStyleText(
     styles[MarkdownElement.CodeSpan],
   )}">${text}</code>`;
 };

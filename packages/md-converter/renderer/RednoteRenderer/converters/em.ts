@@ -6,7 +6,7 @@ export const emConverter: ConverterFunc<MarkdownElement.EM> = (
   styles: Theme,
   text: string,
 ) => {
-  return `<em class="em" style="${makeStyleText(
+  return `<em style="${makeStyleText(
     styles[MarkdownElement.EM],
   )}">${text}</em>`;
 };
