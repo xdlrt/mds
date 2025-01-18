@@ -1,6 +1,6 @@
 import { styleObject } from "../themes";
 
-export const makeStyleText = (styles: styleObject) => {
+export const makeStyleText = (styles?: styleObject) => {
   if (!styles) return "";
   const arr = [];
   for (const key in styles) {

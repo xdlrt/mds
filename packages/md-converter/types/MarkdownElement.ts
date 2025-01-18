@@ -5,6 +5,7 @@ export enum MarkdownElement {
   Quote = "quote",
   List = "list",
   ListItem = "listItem",
+  ListItemSymbol = "listItemSymbol",
   Link = "link",
   Strong = "strong",
   EM = "em", // 斜体

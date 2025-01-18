@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "html2canvas": "^1.4.1",
     "marked": "4.2.3",
     "md-converter": "workspace:^",
     "next": "13.0.6",

@@ -34,13 +34,13 @@ export class WXRenderer extends BaseRenderer {
         return `<code style="font-size: 90%; opacity: 0.6;">[${
           index + 1
         }]</code>: <em style="${makeStyleText(
-          this.theme.footNotes.item,
+          this.theme.footNotes?.item,
         )}">${title}</em><br/>`;
       }
       return `<code style="font-size: 90%; opacity: 0.6;">[${
         index + 1
       }]</code><em style="${makeStyleText(
-        this.theme.footNotes.item,
+        this.theme.footNotes?.item,
       )}">${title}: ${href}</em><br/>`;
     });
     if (notes.length === 0) {
@@ -49,7 +49,7 @@ export class WXRenderer extends BaseRenderer {
     return `<h4 style="${makeStyleText(
       this.theme.heading.h4,
     )}">相关引用</h4><p style="${makeStyleText(
-      this.theme.footNotes.container,
+      this.theme.footNotes?.container,
     )}">${notes.join("\n")}</p>`;
   };
 

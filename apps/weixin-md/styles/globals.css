@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fix text shifting issue with https://github.com/niklasvh/html2canvas/issues/2775 */
+@layer base {
+  img {
+    @apply inline-block;
+  }
+}
+
 .md-editor {
   height: 100% !important;
 }
