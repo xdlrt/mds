@@ -33,7 +33,7 @@
     "postcss": "^8.4.27",
     "prettier": "latest",
     "tailwindcss": "^3.3.3",
-    "turbo": "latest"
+    "turbo": "^2.3.3"
   },
   "engines": {
     "node": ">=18.0.0"

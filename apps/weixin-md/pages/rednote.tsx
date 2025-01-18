@@ -1,27 +1,24 @@
 import Head from "next/head";
 import React from "react";
-import { Editor } from "../components/Editor";
 import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
 import { ToastRoot } from "../components/Toast";
 import Script from "next/script";
+import { RednoteEditor } from "../components/RednoteEditor";
+import { RednoteHeader } from "../components/RednoteHeader";
 
-export default function Web() {
+export default function RedNote() {
   return (
     <div className="w-full h-screen flex flex-col px-3 md:px-6">
       <Head>
-        <title>公众号排版工具 | 一颗小树</title>
-        <meta
-          name="description"
-          content="一款高度简洁的微信 Markdown 编辑器 - 一颗小树"
-        />
+        <title>Rednote Markdown Converter</title>
+        <meta name="description" content="Rednote Markdown Converter" />
         <link rel="shortcut icon" href="/favicon.png" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
 
-      <Header />
+      <RednoteHeader />
       <div style={{ height: "calc(100% - 110px - 52px)" }}>
-        <Editor />
+        <RednoteEditor />
       </div>
       <Footer />
       <ToastRoot />

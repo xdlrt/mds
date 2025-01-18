@@ -1,9 +1,9 @@
 import React from "react";
-import Web from ".";
+import type { AppProps } from "next/app";
 import "../styles/globals.css";
 
-const Index = () => {
-  return <Web />;
-};
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
 
-export default Index;
+export default MyApp;
