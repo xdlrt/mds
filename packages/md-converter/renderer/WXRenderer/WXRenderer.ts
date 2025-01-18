@@ -49,7 +49,7 @@ export class WXRenderer extends BaseRenderer {
     return `<h4 style="${makeStyleText(
       this.theme.heading.h4,
     )}">相关引用</h4><p style="${makeStyleText(
-      this.theme.footNotes.container,
+      this.theme.footNotes?.container,
     )}">${notes.join("\n")}</p>`;
   };
 
