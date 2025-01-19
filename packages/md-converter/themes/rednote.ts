@@ -68,10 +68,18 @@ export const rednoteTheme: Theme = {
     color: `#3f3f3f`,
     "font-size": `14px`,
     "line-height": `1.5`,
+    display: `flex`,
+    "align-items": `start`,
   },
   listItemSymbol: {
-    "margin-right": `4px`,
-    "line-height": `1`,
+    ol: {
+      "margin-right": `4px`,
+      "line-height": `1.5`,
+    },
+    ul: {
+      "margin-right": `4px`,
+      "line-height": `1`,
+    },
   },
   quote: {
     "font-style": `normal`,

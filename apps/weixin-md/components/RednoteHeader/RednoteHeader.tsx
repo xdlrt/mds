@@ -2,7 +2,7 @@ import html2canvas from "html2canvas";
 
 export const RednoteHeader = () => {
   const handleDownloadImages = async () => {
-    const previewElements = document.querySelectorAll(".preview-wrap > div");
+    const previewElements = document.querySelectorAll(".preview-card");
 
     for (let i = 0; i < previewElements.length; i++) {
       const element = previewElements[i] as HTMLElement;

@@ -16,9 +16,10 @@ export const listConverter: ConverterFunc<MarkdownElement.List> = (
     body = segments
       .map(
         (s) =>
-          `<li style="${makeStyleText(
-            styles[MarkdownElement.ListItem],
-          )}"><span style="font-size: 20px;${makeStyleText(styles[MarkdownElement.ListItemSymbol])}">•</span>${s}</li>`,
+          `<li style="${makeStyleText(styles[MarkdownElement.ListItem])}">
+            <span style="font-size: 20px;${makeStyleText(styles[MarkdownElement.ListItemSymbol]?.ul)}">•</span>
+            <span>${s}</span>
+          </li>`,
       )
       .join("");
     return `<ul style="${makeStyleText(styles[MarkdownElement.List].ul)}">${body}</ul>`;
@@ -26,9 +27,10 @@ export const listConverter: ConverterFunc<MarkdownElement.List> = (
   body = segments
     .map(
       (s, i) =>
-        `<li style="${makeStyleText(
-          styles[MarkdownElement.ListItem],
-        )}"><span style="${makeStyleText(styles[MarkdownElement.ListItemSymbol])}">${i + 1}.</span>${s}</li>`,
+        `<li style="${makeStyleText(styles[MarkdownElement.ListItem])}">
+            <span style="${makeStyleText(styles[MarkdownElement.ListItemSymbol]?.ol)}">${i + 1}.</span>
+            <span>${s}</span>
+          </li>`,
     )
     .join("");
   return `<ol style="${makeStyleText(styles[MarkdownElement.List].ol)}">${body}</ol>`;

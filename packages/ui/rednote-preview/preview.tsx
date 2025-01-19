@@ -1,3 +1,5 @@
+import "./preview.css";
+
 export const RednotePreview = ({ previews }: { previews: string[] }) => {
   if (!previews.length)
     return (
