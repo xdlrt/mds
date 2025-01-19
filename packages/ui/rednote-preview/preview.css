@@ -1,0 +1,18 @@
+.preview-card h3 {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.preview-card h3::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  right: 0;
+  top: 50%;
+  height: 8px;
+  background-color: #494E5E;
+  opacity: 0.2;
+  width: calc(100% + 6px);
+  transform: translateY(-50%) skewX(-15deg);
+}
