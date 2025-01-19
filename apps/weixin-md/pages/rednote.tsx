@@ -11,7 +11,10 @@ export default function RedNote() {
     <div className="w-full h-screen flex flex-col px-3 md:px-6">
       <Head>
         <title>Rednote Markdown Converter</title>
-        <meta name="description" content="Rednote Markdown Converter" />
+        <meta
+          name="description"
+          content="A highly concise Rednote Markdown editor! "
+        />
         <link rel="shortcut icon" href="/favicon.png" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
