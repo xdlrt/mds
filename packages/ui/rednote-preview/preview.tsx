@@ -8,7 +8,7 @@ export const RednotePreview = ({ previews }: { previews: string[] }) => {
       </div>
     );
   return (
-    <div className="preview-wrap flex items-center justify-center break-all flex-col bg-amber-50">
+    <div className="preview-wrap flex items-center justify-center break-all flex-col bg-indigo-50">
       {previews.map((preview, i) => (
         <div className="border-solid border border-gray-200 mt-4 last:mb-4">
           <div key={i} className="preview-card bg-white">
