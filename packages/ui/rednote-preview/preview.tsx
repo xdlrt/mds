@@ -30,6 +30,7 @@ export const RednotePreview = ({ previews }: { previews: string[] }) => {
                 <span className="mx-px">/</span>
                 {previews.length}
               </span>
+              {i === 0 && <span className="ml-1">右滑看全部</span>}
             </div>
           </div>
         </div>
