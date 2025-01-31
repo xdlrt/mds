@@ -10,10 +10,10 @@ export default function RedNote() {
   return (
     <div className="w-full h-screen flex flex-col px-3 md:px-6">
       <Head>
-        <title>Rednote Markdown Converter</title>
+        <title>RedMark</title>
         <meta
           name="description"
-          content="A highly concise Rednote Markdown editor! "
+          content="A highly concise Rednote Markdown converter! "
         />
         <link rel="shortcut icon" href="/favicon.png" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
